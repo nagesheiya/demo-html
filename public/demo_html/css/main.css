@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding:0;
+}
+
+.container {
+  /*保证footer是相对于container位置绝对定位*/
+  position:relative;
+  width:100%;
+  min-height:100%;
+  /*设置padding-bottom值大于等于footer的height值，以保证main的内容能够全部显示出来而不被footer遮盖；*/
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  background: url("../imgs/wallpapers.jpg") no-repeat ;
+  background-size: 100% 100%;
+  overflow-y:hidden;
+}
+
+header{
+  width: 100%;
+  height: 10%;
+  background-color: rgb(241, 241, 241);
+}
+
+footer {
+  width: 100%;
+  height:10%;   /* footer的高度一定要是固定值*/
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  text-align: center;
+  background-color: rgb(241, 241, 241);
+}
+
+.form-heading {
+  color:rgb(142, 100, 120);
+  display: inline-block;
+  margin-top: auto;
+  padding-left: 5px;
+}
+
+.content {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom:10px;
+  padding-right: 4px;
+}
+
+.form-control {
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 99%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 5px;
+}
+
+.btn {
+  background: #f0ad4e none repeat scroll 0 0;
+  border-color: #f0ad4e;
+  color: #ffffff;
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #ff9900 none repeat scroll 0 0;
+}
+
+.btn-primary {
+  width: 100%;
+}
+
+.botto-text {
+  color: rgb(142, 100, 120);
+  font-size: 14px;
+  margin: 24px auto;
+}
+
+.back { text-align: left; margin-top:10px;}
+.back a {color: #444444; font-size: 13px;text-decoration: none;}
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: hidden;
+  }
+
+  footer {
+    height: 6%;
+  }
+
+  .botto-text {
+    margin: 10px auto;
+  }
+}
+
+.menu {
+  float: right;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 100%;
+  margin-top: auto;
+  padding-right: 5px;
+
+}
+
+.menu-item {
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  /*background: url("../imgs/shopping_basket_48.png") no-repeat ;*/
+  /*background-size: cover;*/
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-item .img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
+h3 {
+  color: #e6e6e6;
+}
+

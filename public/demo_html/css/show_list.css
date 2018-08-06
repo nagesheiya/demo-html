@@ -1,0 +1,260 @@
+.btn-group {
+  display: inline-flex;
+  width: 20%;
+  margin: 12px;
+}
+
+.btn-display {
+  display: inline-block;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  margin-right: 5px;
+}
+
+.btn-group img {
+  padding-right: 5px;
+}
+
+.btn-search {
+  display: flex;
+  float: right;
+  width: 65%;
+  margin: 12px;
+}
+
+.btn-search input {
+  height: 24px;
+  margin-right: 5px;
+  width: 90%;
+}
+
+.btn-info {
+  color: hsl(0, 0%, 100%);
+  background-color: rgb(55,178,221);
+  border-color: rgb(55,178,221);
+}
+
+.btn-danger {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(354, 70%, 54%);
+  border-color: hsl(354, 70%, 54%);
+}
+
+.btn-cart {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(348, 38%, 65%);
+  border-color: hsl(348, 38%, 65%);
+}
+
+.view-group {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 75%;
+  padding-left: 0;
+  margin-bottom: 0;
+  overflow-y: auto;
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.thumbnail
+{
+  margin-bottom: 30px;
+  padding: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.card {
+  position: relative;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: hsl(0, 0%, 100%);
+  background-clip: border-box;
+  border: 1px solid hsla(0, 0%, 0%, 0.125);
+  border-radius: .25rem;
+}
+
+.item.list-group-item
+{
+  float: none;
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+  max-width: 100%;
+  padding: 0 1rem;
+  border: 0;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.item.list-group-item .img-event {
+  width: 15%;
+  padding: 2px;
+  text-align: center;
+}
+
+.list-group-image
+{
+  margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+  margin-bottom: 0px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.item.list-group-item .caption
+{
+  float: left;
+  width: 70%;
+  margin: 0;
+  padding: 2px;
+  flex: 1 1 auto;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+  display: table;
+  content: " ";
+}
+
+.item.list-group-item:after
+{
+  clear: both;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.item.list-group-item .row{
+  position: absolute;
+  bottom: 2px;
+  width: 60%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.price {
+  position: relative;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  width: 100%;
+  min-height: 1px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.lead {
+  color: hsl(348, 38%, 65%);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .item.list-group-item .thumbnail
+  {
+    height: 68px;
+  }
+  .item.list-group-item .caption
+  {
+    padding: 0;
+  }
+  .item.list-group-item .row {
+    bottom: 2px;
+  }
+  .describe {
+    display: none;
+  }
+  .btn-display {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+
+  .item.list-group-item .img-event {
+    width: 40%;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 400px) {
+
+  .item.list-group-item .img-event {
+    width: 30%;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 1024px) {
+
+  .item.list-group-item .img-event {
+    width: 27%;
+  }
+}
+
+.item.grid-group-item
+{
+  max-width: 29%;
+  flex: 0 0 29%;
+}
+
+.item.grid-group-item .img-event {
+  padding: 2px;
+  text-align: center;
+}
+
+.item.grid-group-item .caption
+{
+  margin: 0;
+  padding: 2px;
+  flex: 1 1 auto;
+}
+
+.item.grid-group-item .row{
+  bottom: 2px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .item.grid-group-item
+  {
+    max-width: 40%;
+    flex: 0 0 40%;
+  }
+  .describe {
+    display: none;
+  }
+  .btn-display {
+    font-size: 11px;
+  }
+}
+
+
+
+
+

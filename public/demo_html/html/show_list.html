@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/show_list.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+      $('#list').click(function(event){event.preventDefault();$('#products .item').removeClass('grid-group-item');$('#products .item').addClass('list-group-item');});
+      $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
+      $('#address').click(event => {
+        window.location.href='address_list.html';
+      });
+    });
+	</script>
+	<title>Title</title>
+</head>
+<body class="container">
+<header>
+	<h1 class="form-heading">AS</h1>
+	<div class="menu">
+		<div class="menu-item">
+			<img class="img" src="../imgs/shopping_basket_48.png">
+		</div>
+		<div class="menu-item">
+			<img class="img" src="../imgs/order_48.png">
+		</div>
+		<div class="menu-item" id="address">
+			<img class="img" src="../imgs/address_48.png">
+		</div>
+		<div class="menu-item">
+			<img class="img" src="../imgs/user_48.png">
+		</div>
+	</div>
+</header>
+
+<section class="content">
+	<div class="btn-group">
+		<img class="img" src="../imgs/list_24.png" id="list">
+		<img class="img" src="../imgs/grid_24.png" id="grid">
+	</div>
+	<div class="btn-search">
+		<input class="form-control" type="text" placeholder="查找" />
+		<img src="../imgs/search_24.png" id="search">
+	</div>
+	<div id="products" class="view-group">
+		<div class="item list-group-item">
+			<div class="thumbnail card">
+				<div class="img-event">
+					<img class="list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt=""/>
+				</div>
+				<div class="caption">
+					<h4>Product title</h4>
+					<p class="describe">
+						Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+						sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					</p>
+					<div class="row">
+						<div class="price">
+							<p class="lead">
+								$21.000</p>
+						</div>
+						<div class="price">
+							<button type="button" class="btn-display btn-cart" onclick="window.location.href='show_list.html';">Add to cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item list-group-item">
+			<div class="thumbnail card">
+				<div class="img-event">
+					<img class="list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt=""/>
+				</div>
+				<div class="caption">
+					<h4>Product title</h4>
+					<p class="describe">
+						Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+						sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					</p>
+					<div class="row">
+						<div class="price">
+							<p class="lead">
+								$21.000</p>
+						</div>
+						<div class="price">
+							<button type="button" class="btn-display btn-cart" onclick="window.location.href='show_list.html';">Add to cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item list-group-item">
+			<div class="thumbnail card">
+				<div class="img-event">
+					<img class="list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt=""/>
+				</div>
+				<div class="caption">
+					<h4>Product title</h4>
+					<p class="describe">
+						Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+						sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					</p>
+					<div class="row">
+						<div class="price">
+							<p class="lead">
+								$21.000</p>
+						</div>
+						<div class="price">
+							<button type="button" class="btn-display btn-cart" onclick="window.location.href='show_list.html';">Add to cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item list-group-item">
+			<div class="thumbnail card">
+				<div class="img-event">
+					<img class="list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt=""/>
+				</div>
+				<div class="caption">
+					<h4>Product title</h4>
+					<p class="describe">
+						Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+						sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					</p>
+					<div class="row">
+						<div class="price">
+							<p class="lead">
+								$21.000</p>
+						</div>
+						<div class="price">
+							<button type="button" class="btn-display btn-cart" onclick="window.location.href='show_list.html';">Add to cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item list-group-item">
+			<div class="thumbnail card">
+				<div class="img-event">
+					<img class="list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt=""/>
+				</div>
+				<div class="caption">
+					<h4>Product title</h4>
+					<p class="describe">
+						Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+						sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					</p>
+					<div class="row">
+						<div class="price">
+							<p class="lead">
+								$21.000</p>
+						</div>
+						<div class="price">
+							<button type="button" class="btn-display btn-cart" onclick="window.location.href='show_list.html';">Add to cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<footer class="footer"><p class="botto-text"> Designed by Sunil Rajput</p></footer>
+</body>
+</html>
