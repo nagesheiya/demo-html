@@ -8,6 +8,15 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
     $(document).ready(function () {
+      $('#top').click(event => {
+        window.location.href = 'show_list.html';
+      });
+      $('#shopping').click(event => {
+        window.location.href = 'shopping_cart.html';
+      });
+      $('#order').click(event => {
+        window.location.href = 'order_list.html';
+      });
       $('#address').click(event => {
         window.location.href = 'address_list.html';
       })
@@ -18,18 +27,18 @@
 </head>
 <body class="container">
 <header>
-	<h1 class="form-heading">AS</h1>
+	<div class="form-heading" id="top"><h1>AS</h1></div>
 	<div class="menu">
-		<div class="menu-item">
+		<div class="menu-item" id="shopping">
 			<img class="img" src="../imgs/shopping_basket_48.png">
 		</div>
-		<div class="menu-item">
+		<div class="menu-item" id="order">
 			<img class="img" src="../imgs/order_48.png">
 		</div>
 		<div class="menu-item" id="address">
 			<img class="img" src="../imgs/address_48.png">
 		</div>
-		<div class="menu-item">
+		<div class="menu-item" id="user">
 			<img class="img" src="../imgs/user_48.png">
 		</div>
 	</div>
@@ -38,49 +47,76 @@
 <section class="content">
 	<div class="title-group"><h3>My Address</h3></div>
 	<div class="btn-add">
-		<img class="img" src="../imgs/plus_24.png">
+		<img class="img" src="../imgs/post_32.png">New
 	</div>
 	<div id="address_list" class="view-group">
 		<div class="item thumbnail card">
-			<div>
-				Name
+			<div class="input-group">
+				Name:<input type="text" class="form-control" placeholder="Receiver">
 			</div>
-			<div>
-				Phone
+			<div class="input-group">
+				Phone:<input type="text" class="form-control" placeholder="Phone">
 			</div>
-			<div>
-				Address
+			<div class="input-group">
+				Address:<textarea rows="2" maxlength="200" wrap="hard" class="form-control textarea"
+				                  placeholder="Address"> </textarea>
 			</div>
-			<div>
-				<button type="button">Save</button>
-			</div>
-		</div>
-		<div class="item thumbnail card">
-			<div>
-				Name
-			</div>
-			<div>
-				Phone
-			</div>
-			<div>
-				Address
-			</div>
-			<div>
-				<button type="button">Save</button>
+			<div class="operator">
+				<div class="operator-item">
+					<img class="img" src="../imgs/trash_24.png">
+				</div>
+				<div class="operator-item">
+					<img class="img" src="../imgs/save_24.png">
+				</div>
+				<div class="operator-item">
+					<img class="img" src="../imgs/write_24.png">
+				</div>
 			</div>
 		</div>
 		<div class="item thumbnail card">
-			<div>
-				Name
+			<div class="input-group">
+				Name:<input type="text" class="form-control" placeholder="Receiver">
 			</div>
-			<div>
-				Phone
+			<div class="input-group">
+				Phone:<input type="text" class="form-control" placeholder="Phone">
 			</div>
-			<div>
-				Address
+			<div class="input-group">
+				Address:<textarea rows="2" maxlength="200" wrap="hard" class="form-control textarea"
+				                  placeholder="Address"> </textarea>
 			</div>
-			<div>
-				<button type="button">Save</button>
+			<div class="operator">
+				<div class="operator-item">
+					<img class="img" src="../imgs/trash_24.png">
+				</div>
+				<div class="operator-item">
+					<img class="img" src="../imgs/save_24.png">
+				</div>
+				<div class="operator-item">
+					<img class="img" src="../imgs/write_24.png">
+				</div>
+			</div>
+		</div>
+		<div class="item thumbnail card">
+			<div class="input-group">
+				Name:<input type="text" class="form-control" placeholder="Receiver">
+			</div>
+			<div class="input-group">
+				Phone:<input type="text" class="form-control" placeholder="Phone">
+			</div>
+			<div class="input-group">
+				Address:<textarea rows="2" maxlength="200" wrap="hard" class="form-control textarea"
+				                  placeholder="Address"> </textarea>
+			</div>
+			<div class="operator">
+				<div class="operator-item">
+					<img class="img" src="../imgs/trash_24.png">
+				</div>
+				<div class="operator-item">
+					<img class="img" src="../imgs/save_24.png">
+				</div>
+				<div class="operator-item">
+					<img class="img" src="../imgs/write_24.png">
+				</div>
 			</div>
 		</div>
 	</div>

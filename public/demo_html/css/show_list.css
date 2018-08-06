@@ -18,6 +18,7 @@
 
 .btn-group img {
   padding-right: 5px;
+  cursor: pointer;
 }
 
 .btn-search {
@@ -145,6 +146,7 @@
   height: auto;
   vertical-align: middle;
   border-style: none;
+  cursor: pointer;
 }
 
 .item.list-group-item .row{
@@ -170,6 +172,19 @@
 .lead {
   color: hsl(348, 38%, 65%);
 }
+
+.cart {
+  position: relative;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  width: 100%;
+  min-height: 1px;
+  background-color: hsl(0, 0%, 100%);
+  text-align: right;
+  cursor: pointer;
+}
+
 
 @media (min-width: 320px) and (max-width: 480px) {
 
