@@ -5,9 +5,22 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/shopping.css">
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
 	<script type="text/javascript">
     $(document).ready(function () {
+      $('#list').click(function (event) {
+        event.preventDefault();
+        $('#products .item').removeClass('grid-group-item');
+        $('#products .item').addClass('list-group-item');
+      });
+      $('#grid').click(function (event) {
+        event.preventDefault();
+        $('#products .item').removeClass('list-group-item');
+        $('#products .item').addClass('grid-group-item');
+      });
       $('#top').click(event => {
         window.location.href = 'show_list.html';
       });
@@ -19,15 +32,14 @@
       });
       $('#address').click(event => {
         window.location.href = 'address_list.html';
-      })
-
+      });
     });
 	</script>
 	<title>Title</title>
 </head>
 <body class="container">
 <header>
-	<div class="form-heading" id="top"><h1>AS</h1></div>
+	<h1 class="form-heading" id="top">AS</h1>
 	<div class="menu">
 		<div class="menu-item" id="shopping">
 			<img class="img" src="../imgs/shopping_basket_48.png">
@@ -46,105 +58,203 @@
 
 <section class="content">
 	<div class="title-group"><h3>My Cart</h3></div>
-	<div id="shopping_list" class="view-group">
-		<table>
-			<thead>
-			<tr>
-				<th>Product</th>
-				<th>Quantity</th>
-				<th class="text-center">Price</th>
-				<th class="text-center">Total</th>
-				<th>&nbsp;</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td class="col-sm-8 col-md-6">
-					<div class="media">
-						<a class="thumbnail pull-left" href="#"> <img class="media-object"
-						                                              src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png"
-						                                              style="width: 72px; height: 72px;"> </a>
-						<div class="media-body">
-							<h4 class="media-heading"><a href="#">Product name</a></h4>
-							<h5 class="media-heading"> by <a href="#">Brand name</a></h5>
-							<span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
-						</div>
-					</div>
-				</td>
-				<td class="col-sm-1 col-md-1" style="text-align: center">
-					<input type="email" class="form-control" id="exampleInputEmail1" value="3">
-				</td>
-				<td class="col-sm-1 col-md-1 text-center"><strong>$4.87</strong></td>
-				<td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
-				<td class="col-sm-1 col-md-1">
-					<button type="button" class="btn btn-danger">
-						<span class="glyphicon glyphicon-remove"></span> Remove
-					</button>
-				</td>
-			</tr>
-			<tr>
-				<td class="col-md-6">
-					<div class="media">
-						<a class="thumbnail pull-left" href="#"> <img class="media-object"
-						                                              src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png"
-						                                              style="width: 72px; height: 72px;"> </a>
-						<div class="media-body">
-							<h4 class="media-heading"><a href="#">Product name</a></h4>
-							<h5 class="media-heading"> by <a href="#">Brand name</a></h5>
-							<span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>
-						</div>
-					</div>
-				</td>
-				<td class="col-md-1" style="text-align: center">
-					<input type="email" class="form-control" id="exampleInputEmail1" value="2">
-				</td>
-				<td class="col-md-1 text-center"><strong>$4.99</strong></td>
-				<td class="col-md-1 text-center"><strong>$9.98</strong></td>
-				<td class="col-md-1">
-					<button type="button" class="btn btn-danger">
-						<span class="glyphicon glyphicon-remove"></span> Remove
-					</button>
-				</td>
-			</tr>
-			<tr>
-				<td> &nbsp;</td>
-				<td> &nbsp;</td>
-				<td> &nbsp;</td>
-				<td><h5>Subtotal</h5></td>
-				<td class="text-right"><h5><strong>$24.59</strong></h5></td>
-			</tr>
-			<tr>
-				<td> &nbsp;</td>
-				<td> &nbsp;</td>
-				<td> &nbsp;</td>
-				<td><h5>Estimated shipping</h5></td>
-				<td class="text-right"><h5><strong>$6.94</strong></h5></td>
-			</tr>
-			<tr>
-				<td> &nbsp;</td>
-				<td> &nbsp;</td>
-				<td> &nbsp;</td>
-				<td><h3>Total</h3></td>
-				<td class="text-right"><h3><strong>$31.53</strong></h3></td>
-			</tr>
-			<tr>
-				<td> &nbsp;</td>
-				<td> &nbsp;</td>
-				<td> &nbsp;</td>
-				<td>
-					<button type="button" class="btn btn-default">
-						<span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
-					</button>
-				</td>
-				<td>
-					<button type="button" class="btn btn-success">
-						Checkout <span class="glyphicon glyphicon-play"></span>
-					</button>
-				</td>
-			</tr>
-			</tbody>
-		</table>
+	<div class="btn-search">
+		<input class="form-control" type="text" placeholder="查找"/>
+		<img src="../imgs/search_24.png" id="search" style="cursor: pointer;">
 	</div>
+	<div id="products" class="view-group">
+		<div class="item list-group-item">
+			<div class="thumbnail card">
+				<div class="img-event">
+					<img class="list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt=""/>
+				</div>
+				<div class="caption">
+					<div style="height: 50%; width: 100%;display: flex">
+						<div style="width: 80%"><a href="#"><h4>Product title</h4></a></div>
+						<div class="check">
+							<label>
+								<input type="checkbox"/>
+								<div class="show-box"></div>
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="price">
+							<p class="lead">
+								$21.00</p>
+						</div>
+						<div class="cart">
+							<div class="input-group">
+								<button type="button" class="btn-display btn-danger btn-number btn-number-left" data-type="minus"
+								        data-field="quant[2]">
+									<span class="glyphicon glyphicon-minus"></span>
+								</button>
+								<input type="text" name="quant[2]" class="form-control input-number" value="10">
+								<button type="button" class="btn-display btn-info btn-number btn-number-right" data-type="plus"
+								        data-field="quant[2]">
+									<span class="glyphicon glyphicon-plus"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item list-group-item">
+			<div class="thumbnail card">
+				<div class="img-event">
+					<img class="list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt=""/>
+				</div>
+				<div class="caption">
+					<div style="height: 50%; width: 100%;display: flex">
+						<div style="width: 80%"><a href="#"><h4>Product title</h4></a></div>
+						<div class="check">
+							<label>
+								<input type="checkbox"/>
+								<div class="show-box"></div>
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="price">
+							<p class="lead">
+								$21.00</p>
+						</div>
+						<div class="cart">
+							<div class="input-group">
+								<button type="button" class="btn-display btn-danger btn-number btn-number-left" data-type="minus"
+								        data-field="quant[2]">
+									<span class="glyphicon glyphicon-minus"></span>
+								</button>
+								<input type="text" name="quant[2]" class="form-control input-number" value="10">
+								<button type="button" class="btn-display btn-info btn-number btn-number-right" data-type="plus"
+								        data-field="quant[2]">
+									<span class="glyphicon glyphicon-plus"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item list-group-item">
+			<div class="thumbnail card">
+				<div class="img-event">
+					<img class="list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt=""/>
+				</div>
+				<div class="caption">
+					<div style="height: 50%; width: 100%;display: flex">
+						<div style="width: 80%"><a href="#"><h4>Product title</h4></a></div>
+						<div class="check">
+							<label>
+								<input type="checkbox"/>
+								<div class="show-box"></div>
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="price">
+							<p class="lead">
+								$21.00</p>
+						</div>
+						<div class="cart">
+							<div class="input-group">
+								<button type="button" class="btn-display btn-danger btn-number btn-number-left" data-type="minus"
+								        data-field="quant[2]">
+									<span class="glyphicon glyphicon-minus"></span>
+								</button>
+								<input type="text" name="quant[2]" class="form-control input-number" value="10">
+								<button type="button" class="btn-display btn-info btn-number btn-number-right" data-type="plus"
+								        data-field="quant[2]">
+									<span class="glyphicon glyphicon-plus"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item list-group-item">
+			<div class="thumbnail card">
+				<div class="img-event">
+					<img class="list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt=""/>
+				</div>
+				<div class="caption">
+					<div style="height: 50%; width: 100%;display: flex">
+						<div style="width: 80%"><a href="#"><h4>Product title</h4></a></div>
+						<div class="check">
+							<label>
+								<input type="checkbox"/>
+								<div class="show-box"></div>
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="price">
+							<p class="lead">
+								$21.00</p>
+						</div>
+						<div class="cart">
+							<div class="input-group">
+								<button type="button" class="btn-display btn-danger btn-number btn-number-left" data-type="minus"
+								        data-field="quant[2]">
+									<span class="glyphicon glyphicon-minus"></span>
+								</button>
+								<input type="text" name="quant[2]" class="form-control input-number" value="10">
+								<button type="button" class="btn-display btn-info btn-number btn-number-right" data-type="plus"
+								        data-field="quant[2]">
+									<span class="glyphicon glyphicon-plus"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item list-group-item">
+			<div class="thumbnail card">
+				<div class="img-event">
+					<img class="list-group-image img-fluid" src="http://placehold.it/400x250/000/fff" alt=""/>
+				</div>
+				<div class="caption">
+					<div style="height: 50%; width: 100%;display: flex">
+						<div style="width: 80%"><a href="#"><h4>Product title</h4></a></div>
+						<div class="check">
+							<label>
+								<input type="checkbox"/>
+								<div class="show-box"></div>
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="price">
+							<p class="lead">
+								$21.00</p>
+						</div>
+						<div class="cart">
+							<div class="input-group">
+								<button type="button" class="btn-display btn-danger btn-number btn-number-left" data-type="minus"
+								        data-field="quant[2]">
+									<span class="glyphicon glyphicon-minus"></span>
+								</button>
+								<input type="text" name="quant[2]" class="form-control input-number" value="10">
+								<button type="button" class="btn-display btn-info btn-number btn-number-right" data-type="plus"
+								        data-field="quant[2]">
+									<span class="glyphicon glyphicon-plus"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="display: flex;float: right;padding-top: 5px;padding-right: 12px;">
+		<div class="total">Total: 1234567</div>
+		<button type="button" class="btn-display btn-info">Checkout
+		</button>
+	</div>
+
 </section>
 <footer class="footer"><p class="botto-text"> Designed by Sunil Rajput</p></footer>
 </body>
